@@ -1,0 +1,30 @@
+.nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.nav-panel{
+    display: flex;
+   justify-content: space-between;
+}
+
+.img{
+    display: flex;
+    justify-content: center;
+}
+
+h1{
+    text-align: center;
+}
+
+p{
+    text-align: center;
+}
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
