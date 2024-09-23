@@ -1,12 +1,21 @@
 .nav{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 50px;
 }
 
 .nav-panel{
     display: flex;
-   justify-content: space-between;
+   justify-content: space-evenly;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    padding-right: 30px;
+    color: #666666;
+    font-size: large;
+    cursor: pointer;
 }
 
 .img{
@@ -16,15 +25,28 @@
 
 h1{
     text-align: center;
+    color: #424242;
+    font-size: 50px;
+    font-weight: bold;
 }
 
 p{
     text-align: center;
+    font-size: large;
 }
 
 
 .btn{
     display: flex;
     justify-content: center;
-    align-items: center;
 }
+
+button{
+    padding: 10px 19px;
+    background-color: #387ed1;
+    color: white;
+    border: none;
+    font-size: large;
+    border-radius: 3px;
+}
+
