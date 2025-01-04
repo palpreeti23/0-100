@@ -3,7 +3,7 @@
 let fname = "preeti";
 let lname = "pal";
 let greetings = "good morning " + fname + lname;
-console.log(greetings)
+// console.log(greetings)
 
 // write a program to greet a person based on their gender
 
@@ -23,7 +23,7 @@ for(let i = 0; i<= 1000; i++){
     num = num + i;
   
 }
-console.log(num);
+// console.log(num);
 
 // 1. Write a program prints all the even numbers in an array
 
@@ -49,7 +49,7 @@ for(let i =0; i<arr2.length ; i++){
     }
 }
 
-console.log(bigNum)
+// console.log(bigNum)
 
 // 3. Write a program that prints all the male people’s first name given a complex object
 
@@ -77,7 +77,7 @@ let user = [{
 
 for (let i = 0; i < user.length; i++){
     if(user[i].gender === 'male'){
-        console.log(user[i].fname)
+        // console.log(user[i].fname)
     }
 }
 
@@ -85,8 +85,67 @@ for (let i = 0; i < user.length; i++){
 
 let arr3 = [1,3,5,7,6,34,56,24,56,76];
 
-for(let i = arr3.length-1; i>=0 i--){
+for(let i = arr3.length-1; i>=0 ; i--){
 
-    console.log(arr3[i])
+    // console.log(arr3[i])
 }
 
+// let sum = 0;
+// for(let i = 0; i<=10000000; i++){
+//     sum = sum + i;
+// }
+
+// console.log(sum)
+
+// callback
+
+ function sum(a,b,nxtFun){
+     let res = a+b;
+     nxtFun(res);
+    //  return res;
+    // findAns(res);
+}
+
+function findAns(ans){
+   console.log('the ans is '+ ans);
+}
+
+function findAnsPassive(ans){
+    console.log('ans of data is' + ans);
+}
+
+let value = sum(2,4, findAnsPassive);
+// console.log(value);
+
+
+// setTimeout and setInterval
+
+function msg(){
+    console.log('hiiii preeeti');
+}
+
+setTimeout(msg , 5*1000);
+
+// setInterval(msg, 3 * 1000);
+
+//set a terminaal clock in hh:mm:ss
+//the basic terminal clock
+
+let readline = require('readline');
+function clock(){
+    let time = new Date();
+    let hour = String(time.getHours());
+    let min = String(time.getMinutes());
+    let sec = String(time.getSeconds());
+    return `${hour}:${min}:${sec}`;
+}
+
+function displayClock(){
+
+    // console.log(clock())
+    readline.cursorTo(process.stdout, 0)//prints in the same line
+    process.stdout.write(clock())
+  
+}
+
+setInterval(displayClock, 1000);
