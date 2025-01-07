@@ -69,19 +69,59 @@ function msg4(str){
 */
 
 function isPalindrome(str) {
+    let newStr = str.toLowerCase()
+    // console.log(newStr)
     let string = '';
-    for(let i=str.length-1; i>=0;i--){
-         string = string+str[i];
+    for(let i= newStr.length-1; i>=0;i--){
+         string = string+newStr[i];
     }
-    if(string === str){
+    if(string === newStr){
         return true;
     }
     else{
         return false;
     }
   }
-  
-  let val = isPalindrome('madam')
-console.log(val)
+ 
 
+//   console.log(isPalindrome ('level'));
+//   console.log(isPalindrome ('racecar'));
+//   console.log(isPalindrome ('hello'));
+//   console.log(isPalindrome (' '));
+//   console.log(isPalindrome ('Anna'));
+//   console.log(isPalindrome ('a'));
+
+  
+//   let val = isPalindrome('madam')
+// console.log(val)
+
+/*
+  Implement a function `countVowels` that takes a string as an argument and returns the number of vowels in the string.
+  Note: Consider both uppercase and lowercase vowels ('a', 'e', 'i', 'o', 'u').
+
+  Once you've implemented the logic, test your code by running
+*/
+
+function countVowels(str) {
+      let vowels = 'aeiouAEIOU'
+      let count =0;
+
+    for (const char of str) {
+        if(vowels.includes(char)){
+            count++
+        }
+    }
+    return count
+}
+
+// let ans = countVowels('preeti');
+// console.log(ans)
+
+console.log(countVowels('hello'));
+console.log(countVowels('programming'));
+console.log(countVowels('rhythm'));
+console.log(countVowels(''));
+console.log(countVowels('EaSiEr'));
+console.log(countVowels('hello to you all'));
+console.log(countVowels('hello,world'));
 
