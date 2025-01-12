@@ -14,6 +14,7 @@
 
 
 // async function - opposite of sync and multiple thing are context switching with each other.
+// example - setTimeout and file read
 
 // console.log('test txt1')
 
@@ -30,6 +31,19 @@
 // }
 // setTimeout(sumVal, 2000)
 // console.log('test txt 2');
+
+
+// reading from a file
+
+// console.log('data before read')
+//  const fs = require('fs');
+
+//    fs.readFile('a.txt', 'utf-8', function(err,data){
+//         console.log('data after read');
+//         console.log(data)
+//      })
+  
+// console.log('data after after read')
 
 // const { promises } = require('dns');
 
@@ -96,18 +110,18 @@
 
 // async await - used for handling promises more easily.
 
-function someVal(){
-    let p = new Promise(function(resolve){
-        setTimeout(function(){
-            resolve("i'm preeti");
-        }, 1000)
-    })
-    return p;
-}
+// function someVal(){
+//     let p = new Promise(function(resolve){
+//         setTimeout(function(){
+//             resolve("i'm preeti");
+//         }, 1000)
+//     })
+//     return p;
+// }
 
- async function main(data){
-    let val = await someVal()
-    console.log(val)
-}
+//  async function main(data){
+//     let val = await someVal()
+//     console.log(val)
+// }
 
-someVal().then(main)
+// someVal().then(main)
