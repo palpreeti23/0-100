@@ -74,8 +74,11 @@ function readingFile(){
     fs.readFile('a.txt', 'utf-8', function(err, data){
         console.log('the countent of the file');
         console.log(data);
-        data = data + 'im from jairamnagar';
-        fs.writeFile('a.txt', 'utf-8')
+        data = data + "im from jairamnagar";
+        fs.writeFile('a.txt', data, function(err){
+            console.log('done')
+            console.log('data after writing :', data)
+        })
     })
 }
 
