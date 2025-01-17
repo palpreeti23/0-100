@@ -116,27 +116,42 @@
 //  - HH:MM::SS (Eg. 13:45:23)
 
 //  - HH:MM::SS AM/PM (Eg 01:45:23 PM)
-let counterDiv = document.querySelector('.counter');
-let counterDiv2 = document.querySelector('.counter2');
-function currTime(){
+// let counterDiv = document.querySelector('.counter');
+// let counterDiv2 = document.querySelector('.counter2');
+// function currTime(){
     
-    let now = new Date();
-    let hour = String(now.getHours());
-    let minute = String(now.getMinutes());
-    let sec = String(now.getSeconds());
+//     let now = new Date();
+//     let hour = String(now.getHours());
+//     let minute = String(now.getMinutes());
+//     let sec = String(now.getSeconds());
 
-// for HH:MM:SS 
-    let time = `${hour}:${minute}:${sec}`;
-    counterDiv.textContent = `${time}`
+// // for HH:MM:SS 
+//     let time = `${hour}:${minute}:${sec}`;
+//     counterDiv.textContent = `${time}`
 
-// for second formate
+// // for second formate
 
-      let hour12 = ((now.getHours()+ 11)%12) + 1;
-      let amPm = now.getHours() >= 12 ? 'PM' : 'AM'
-      counterDiv2.textContent = `${hour12}:${minute}:${sec} ${amPm}`
+//       let hour12 = ((now.getHours()+ 11)%12) + 1;
+//       let amPm = now.getHours() >= 12 ? 'PM' : 'AM'
+//       counterDiv2.textContent = `${hour12}:${minute}:${sec} ${amPm}`
     
     
+// }
+
+// setInterval(currTime,1000);
+// currTime();
+
+
+// Write a function that returns a promise that resolves after n seconds have passed, where n is passed as an argument to the function.
+
+function msg(n){
+    return new Promise(function(resolve){
+       setTimeout(resolve, n*1000)
+    })
 }
-
-setInterval(currTime,1000);
-currTime();
+async function main(){
+    let val = await msg();
+    console.log('hii im in here')
+}
+msg(3).then(main)
+console.log('hii there')
