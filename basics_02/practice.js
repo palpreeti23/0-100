@@ -144,14 +144,74 @@
 
 // Write a function that returns a promise that resolves after n seconds have passed, where n is passed as an argument to the function.
 
-function msg(n){
+// function msg(n){
+//     return new Promise(function(resolve){
+//        setTimeout(resolve, n*1000)
+//     })
+// }
+// async function main(){
+//     let val = await msg();
+//     console.log('hii im in here')
+// }
+// msg(3).then(main)
+// console.log('hii there')
+
+
+// Write a function that halts the JS thread (make it busy wait) for a given number of milliseconds.
+//  * During this time the thread should not be able to do anything else.
+//  * the function should return a promise just like before
+
+// function makesFuncWait(ms){
+//     return new Promise(function(resolve){
+//         let start = new Date();
+//         while(Date.now() - start < ms){
+//         }
+//         resolve();
+//     })
+// }
+// makesFuncWait(5000).then(()=>{
+//     console.log('2000 ms have passed')
+// })
+
+// console.log('hii there');
+
+
+
+
+// * Write 3 different functions that return promises that resolve after t1, t2, and t3 seconds respectively.
+// * Write a function that uses the 3 functions to wait for all 3 promises to resolve using Promise.all,
+// * Return a promise.all which return the time in milliseconds it takes to complete the entire operation.
+
+function wait1(t1) {
     return new Promise(function(resolve){
-       setTimeout(resolve, n*1000)
+        setTimeout(() => {
+            resolve('')
+        }, t1*1000);
     })
 }
-async function main(){
-    let val = await msg();
-    console.log('hii im in here')
+
+function wait2(t2) {
+ return new Promise(function (resolve) {
+   setTimeout(() => {
+     resolve("");
+   }, t2*1000);
+ });
 }
-msg(3).then(main)
-console.log('hii there')
+
+function wait3(t3) {
+ return new Promise(function (resolve) {
+   setTimeout(() => {
+     resolve("");
+   }, t3*1000);
+ });
+}
+function calculateTime(t1, t2, t3) {
+    const startTime = Date.now();
+    return Promise.all([wait1(t1),wait2(t2),wait3(t3)]).then(()=>{
+        const endTime = Date.now();
+        return endTime- startTime;
+    })
+}
+calculateTime(1, 2, 3).then((TotalTime)=>{
+    console.log(`the time is :${TotalTime}` )
+})
