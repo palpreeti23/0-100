@@ -1,8 +1,8 @@
 // sync function - where operation happens one after another sequentially. 
 
-// console.log('hiii')
-// console.log('this is preeti');
-// console.log('and something');
+console.log('hiii')
+console.log('this is preeti');
+console.log('and something');
 
 // function sum(a,b){
 //     let num = a + b;

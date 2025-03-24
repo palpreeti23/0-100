@@ -32,7 +32,7 @@ app.post('/', function(req, res){
         health: isHealthy
     })
     res.json({
-        msg : 'done'
+        "msg" : "done"
     })
 })
 app.listen(8080)
