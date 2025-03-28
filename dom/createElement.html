@@ -14,6 +14,14 @@
         <li>more</li>
     </ul>
 
+    <form action="" id="frm">
+        <input type="text" name="fname" id="fname">
+        <input type="text" name="lname" id="lname">
+        <button onclick="showFun()">click here</button>
+        <div id="demo"></div>
+    </form>
+
+   
 
     <script>
        const div = document.createElement('div');
@@ -43,6 +51,18 @@
 
     parent.style.backgroundColor = 'green'
 
+    </script>
+
+    <script>
+        function showFun(){
+            const form = document.forms['frm'];
+        let txt =' ';
+        for(let i = 0; i< form.length ; i++){
+            txt += form.elements[i].value + '<br>'
+        }
+        document.getElementById('demo').innerHTML = txt;
+        }
+ 
     </script>
 </body>
 </html>
