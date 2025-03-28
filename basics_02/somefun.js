@@ -11,10 +11,11 @@ const sum = (c, d)=>{
 }
 console.log(sum(4,7))
 
+
+//MAP function
+
 // given an array , give me an array back in which every value is multiplied by 2.
-
 const arr = [2,3,4,5,6,7,9,8]
-
 // const newarr = arr.map((val)=>{
 //     return val*2
 // })
@@ -76,3 +77,53 @@ const newDates = dates.map((val)=>{
 
 })
 console.log(newDates)
+
+// FILTER FUNCTION 
+
+//given an input arrays give me back only the even values
+
+const num = [2,3,4,5,6,7,8,13,54,34]
+const evenNum = num.filter((val)=>{
+    if(val%2 == 0){
+        return val
+    }
+})
+console.log(evenNum)
+
+// Filter words that have more than 5 letters.
+const word = ["apple", "banana", "cat", "elephant"];
+// Expected output: ["banana", "elephant"]
+const newWord = word.filter((val)=>{
+
+    return val.length > 5
+})
+console.log(newWord)
+
+// Filter out negative numbers from an array.
+const numbers = [-3, -1, 2, 5, -7, 8];
+// Expected output: [2, 5, 8]
+const posVal = numbers.filter((val)=>{
+
+    return val > 0
+})
+console.log(posVal)
+
+// Filter students who passed the exam (score >= 50).
+const student = [
+    { name: "Alice", score: 85 },
+    { name: "Bob", score: 40 },
+    { name: "Charlie", score: 78 }
+];
+// Expected output: [{ name: "Alice", score: 85 }, { name: "Charlie", score: 78 }]
+const studentWhoPassedTheExam = student.filter((val)=>{
+    return val = val.score >=50
+})
+console.log(studentWhoPassedTheExam)
+
+// Filter valid email addresses (must contain '@').
+const emails = ["user@example.com", "hello@", "test.com", "admin@gmail.com"];
+// Expected output: ["user@example.com", "admin@gmail.com"]
+const validId = emails.filter((val)=>{
+    return val = val.includes('@') && val.includes('.com')
+})
+console.log(validId)
