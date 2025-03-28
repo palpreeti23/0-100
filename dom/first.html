@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hiii</h1>
+    <h2 id="head">hiiii heading 2</h2>
+    <p class="para">this is a small paraghraph</p>
+    <div>and...this is a div</div>
+
+
+
+    <script>
+       let heading= document.getElementById('head')
+       heading.innerHTML ='hiii2';
+       heading.style.backgroundColor='red';
+       heading.setAttribute('class','newhead')
+    //    console.log(heading)
+       heading.getAttribute('class')
+    //    console.log(heading);
+         heading.removeAttribute('class')
+    console.log(heading);
+    heading.style.fontFamily = 'cursive'
+    heading.textContent = 'preeti pal';
+    
+      document.getElementsByClassName('para')[0].innerHTML = 'norm para'
+      document.getElementsByTagName('h1')[0].innerHTML= 'new heading 1'
+      let param = document.querySelector('.para')
+      param.style.backgroundColor = 'blue'
+      
+    </script>
+</body>
+</html>
