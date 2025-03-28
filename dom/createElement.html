@@ -24,6 +24,8 @@
        const parent = document.getElementById('parentNode');
        const newLi = document.createElement('li')
        newLi.innerHTML = 'and many more';
+       newLi.style.fontFamily = 'cursive'
+       newLi.style.backgroundColor ='blue'
        parent.appendChild(newLi)
 
        //remove child
@@ -38,6 +40,8 @@
 
     //insert child
     parent.insertBefore(parent.lastElementChild, parent.children[2])
+
+    parent.style.backgroundColor = 'green'
 
     </script>
 </body>
