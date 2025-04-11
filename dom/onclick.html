@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onclick="fun2(this)">this is a heading</h1>
+    <p onclick="this.innerHTML= 'oops'">this is a para</p>
+    <p id="para">
+        this is a txt.
+        this is a txt.
+        yhis is a txt.
+    </p>
+    
+    <input type="button" value="hide txt"
+    onclick="document.getElementById('para').style.visibility = 'hidden'">
+
+    <input type="button" value="show txt"
+    onclick="document.getElementById('para').style.visibility = 'visible'">
+
+
+    <p>click 'try me' to see date and time</p>
+    <button id="btn" onclick="ShowTime()">try me</button>
+    <p id="demo"></p>
+    <script>
+        function fun2(val){
+            val.innerHTML = 'biggest heading'
+        }
+
+        function ShowTime(val){
+            document.getElementById('demo').innerHTML = Date();
+        }
+
+    </script>
+</body>
+</html>
