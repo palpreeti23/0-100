@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">click me</button>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <button id="myBtn">try me</button>
+    <button id="newBtn">try clicking me</button>
+    <p id="para"></p>
+   
+    <script>
+        document.getElementById("btn").addEventListener('click', function(){
+            alert('hey preeti pal')
+        })
+
+        window.addEventListener('resize', function(){
+            document.getElementById('demo').innerHTML = Math.random();
+            document.getElementById('demo1').innerHTML = 'welcome to window pree'
+            
+        })
+
+        const a = document.getElementById('myBtn')
+        a.addEventListener("click",function(){
+            alert('heyyyyyyyyyyyyy')
+        })
+        a.addEventListener("click",function(){
+            alert('how ya doin')
+        })
+
+        const x = document.getElementById('newBtn')
+        x.addEventListener('mouseover', function(){
+            document.getElementById('para').innerHTML += 'mouse over here<br>'
+        })
+      
+        x.addEventListener('click', function(){
+            document.getElementById('para').innerHTML += 'clicked<br>'
+        })
+        
+        x.addEventListener('mouseout', function(){
+            document.getElementById('para').innerHTML += 'mouse out there<br>'
+        })
+    </script>
+</body>
+</html>
