@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="myDiv" style="background-color: peachpuff; padding: 10px;">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias consequuntur velit aut voluptate, dolorum delectus dolore omnis quia perspiciatis laborum recusandae nobis culpa possimus porro architecto. Dicta odio impedit quia corporis voluptatem inventore quisquam reiciendis, commodi exercitationem nihil nobis, dolor perspiciatis veritatis ducimus! Inventore nihil veniam ratione velit! Excepturi!</p>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, tenetur.
+        </p>
+
+        <button onclick="removeHandler()">remove</button>
+    </div>
+    <p id="demo"></p>
+
+    <div id="div1" style="background-color: orange; padding: 10px;">
+        <h1>bubbling</h1>
+        <p id="p1" style="background-color: white; padding: 10px;">click me</p>
+    </div>
+
+    <div id="div2" style="background-color: orange; padding: 10px;">
+        <h1>capturing</h1>
+        <p id="p2" style="background-color: white; padding: 10px;">click me</p>
+    </div>
+
+
+    <script>
+        document.getElementById("myDiv").addEventListener('mouseover',mouseHandler)
+
+        function mouseHandler(){
+            document.getElementById('demo').innerHTML = Math.random()
+        }
+        function removeHandler(){
+            document.getElementById('myDiv').removeEventListener('mouseover',mouseHandler )
+        }
+        
+        document.getElementById('p1').addEventListener('click', function(){
+            alert('you clicked white space')
+        },false)
+        document.getElementById('div1').addEventListener('click', function(){
+            alert('you clicked orange space')
+        },false)
+
+        document.getElementById('p2').addEventListener('click', function(){
+            alert('you clicked white space')
+        },true)
+        document.getElementById('div2').addEventListener('click', function(){
+            alert('you clicked orange space')
+        },true)
+        </script>
+</body>
+</html>
