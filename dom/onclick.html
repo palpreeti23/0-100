@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1 onclick="fun2(this)">this is a heading</h1>
     <p onclick="this.innerHTML= 'oops'">this is a para</p>
@@ -13,26 +15,64 @@
         this is a txt.
         yhis is a txt.
     </p>
-    
-    <input type="button" value="hide txt"
-    onclick="document.getElementById('para').style.visibility = 'hidden'">
 
-    <input type="button" value="show txt"
-    onclick="document.getElementById('para').style.visibility = 'visible'">
+    <input type="button" value="hide txt" onclick="document.getElementById('para').style.visibility = 'hidden'">
+
+    <input type="button" value="show txt" onclick="document.getElementById('para').style.visibility = 'visible'">
 
 
     <p>click 'try me' to see date and time</p>
     <button id="btn" onclick="ShowTime()">try me</button>
     <p id="demo"></p>
+
+
+    <p>enter your name:</p>
+    <input type="text" id="name" oninput="upperCase()">
+
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)"
+        style="height: 60px; width: 60px; background-color: green; padding: 12px;">mouse here!!</div>
+
+
+    <div onmousedown="mDown(this)" onmouseup="mUp(this)"
+        style="height: 60px; width: 60px; background-color: aqua; padding: 12px;">mouse here!!</div>
     <script>
-        function fun2(val){
+        function fun2(val) {
             val.innerHTML = 'biggest heading'
         }
 
-        function ShowTime(val){
+        function ShowTime(val) {
             document.getElementById('demo').innerHTML = Date();
         }
 
+        function upperCase() {
+            let n = document.getElementById("name")
+            n.value = n.value.toUpperCase()
+        }
+
+        function mOver(obj) {
+
+            obj.innerHTML = 'thankyou'
+        }
+        function mOut(obj) {
+
+            obj.innerHTML = 'mouse over here!!'
+        }
+
+
+        function mDown(obj) {
+
+            obj.style.backgroundColor = 'blue'
+            obj.innerHTML = 'release me!!'
+        }
+        function mUp(obj) {
+
+              obj.style.backgroundColor = 'red'
+            obj.innerHTML = 'click me!!'
+        }
+
+
+
     </script>
 </body>
+
 </html>
